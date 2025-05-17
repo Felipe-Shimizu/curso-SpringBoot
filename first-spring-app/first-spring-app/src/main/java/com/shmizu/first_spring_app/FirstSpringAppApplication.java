@@ -3,7 +3,7 @@ package com.shmizu.first_spring_app;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// @ são anotações
+// @ são anotações ou decorações para classe, metodo e parametros
 @SpringBootApplication
 // @Configuration -> vai definir que a classe pode ter métodos que definem beans
 // @EnableAutoConfiguration -> vai ativar a auto configuração do Spring

@@ -1,10 +1,9 @@
 package com.shmizu.first_spring_app.controller;
 
+import com.shmizu.first_spring_app.domain.User;
 import com.shmizu.first_spring_app.service.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 // STATELESS -> a cada nova requisição eu recebo todas as informações que eu preciso para fazer aquela funcionalidade que o cliente pediu/ pode ser utilizado um token no lugar de login e senha
@@ -28,5 +27,10 @@ public class HelloWorldController {
     @GetMapping
     public String helloWorld() {
         return helloWorldService.helloWorld("Shimizu");
+    }
+
+    @PostMapping("")
+    public String helloWorldPost(@RequestBody User body) {
+        return "Hello World Post" + body.getName();
     }
 }
